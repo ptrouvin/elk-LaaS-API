@@ -213,3 +213,45 @@ Open the documentation page:
                                 
 <br><img src="web/images/laas-version.png">
 
+<h2>Dependencies</h2>
+
+<ul>
+<li><a href="https://hc.apache.org/">Apache http client</a></li>
+<li><a href="https://github.com/java-native-access/jna">Java Native Access - jna</a></li>
+<li><a href="https://github.com/google/gson">Google JSON - gson</a></li>
+<li><a href="http://kafka.apache.org/">Apache Message Queue - kafka</a></li>
+<li><a href="http://www.slf4j.org/">Simple Logging Facade for Java - slf4j</a></li>
+<li><a href="https://pholser.github.io/jopt-simple/">Command-line option parser - jopt-simple</a></li>
+<li><a href="https://code.google.com/archive/p/jsnappy/">Google De/Compressor - snappy</a></li>
+</ul>
+
+<p>Detailed librairies
+<ul>
+<li>commons-codec-1.9.jar</li>
+<li>commons-logging-1.2.jar</li>
+<li>fluent-hc-4.5.1.jar</li>
+<li>httpclient-4.5.1.jar</li>
+<li>httpclient-cache-4.5.1.jar</li>
+<li>httpclient-win-4.5.1.jar</li>
+<li>httpcore-4.4.3.jar</li>
+<li>httpmime-4.5.1.jar</li>
+<li>jna-4.1.0.jar</li>
+<li>jna-platform-4.1.0.jar</li>
+<li>gson-2.3.1.jar</li>
+<li>kafka_2.9.1-0.8.2.1.jar</li>
+<li>log4j-1.2.16.jar</li>
+<li>lz4-1.2.0.jar</li>
+<li>metrics-core-2.2.0.jar</li>
+<li>scala-library-2.9.1.jar</li>
+<li>slf4j-api-1.7.6.jar</li>
+<li>slf4j-log4j12-1.6.1.jar</li>
+<li>snappy-java-1.1.1.6.jar</li>
+<li>zkclient-0.3.jar</li>
+<li>zookeeper-3.4.6.jar</li>
+<li>jopt-simple-3.2.jar</li>
+<li>kafka-clients-0.8.2.1.jar</li>
+</ul>
+</p>
+
+<h2>Installation</h2>
+
