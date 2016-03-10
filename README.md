@@ -22,10 +22,8 @@ limitations under the License.
 </ul>
 
 <h2>LaaS - Log as a Service - Principles</h2>
-    
-                
-                <img id="tab1_archi" src="web/images/laas-architecture.png" alt="LaaS - Architecture">
-                <img id="tab1_comp" src="web/images/LaaS-Components.png" alt="LaaS - Components">
+<img src="web/images/laas-architecture.png" alt="LaaS - Architecture">
+<img src="web/images/LaaS-Components.png" alt="LaaS - Components">
                 
 <h2>LaaS - API</h2>
                 
@@ -210,7 +208,7 @@ Date: Wed, 16 Sep 2015 14:47:13 GMT
 <h2>HowTo</h2>
                 
 <h3>Get the API component version</h3>
-Open the documentation page: <a href="principles.html">click here</a>
+Open the documentation page: 
 <br>Move your mouse on the page title <img src="web/images/laas-version-title.png" width="250">
                                 
 <br><img src="web/images/laas-version.png">
