@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.4
+Created-By: 1.8.0_60-b27 (Oracle Corporation)
+Bundle-Name: LaaS-API
+Bundle-Version: 0.0.1
+Bundle-Date: 2015-09-17 14:24:42 CEST
+Implementation-Title: LaaS-API
+Implementation-Version: 0.0.1
+Implementation-URL: http://www.example.com
+
