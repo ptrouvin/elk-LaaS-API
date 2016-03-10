@@ -30,20 +30,20 @@ limitations under the License.
 These API are used by the WAP/Automation.
                 
 HTTP REST api
-                                <dl>
-                                    <dt>Create / Update a logid or an associated field</dt>
-                                    <dd>
+<dl>
+<dt>Create / Update a logid or an associated field</dt>
+<dd>
                                         Make an HTTP PUT request to web service <b>/LaaS-API/logid</b>
                                         with the following parameter in query string:
-                                        <ul>
-                                            <li>
+<ul>
+<li>
                                                 <b>lid</b> or <b>logid</b> the logid key, as a string
                                                 <br><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
                                                 Be careful with this key, the value MUST not be easilly guessable for obvious security reasons.
                                                 <br>You must integrate random data.
                                                 <br>A proposal:  cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1
-                                            </li>
-                                            <li>
+</li>
+<li>
                                                 rule_name=&lt;RULE&gt;
                                                 <br>With &lt;RULE&gt;:
                                                 <br><b>fieldName</b><b>Comparator</b><b>fieldValue</b>
@@ -54,15 +54,15 @@ HTTP REST api
                                                     <li><b>=$</b> ends with</li>
                                                     <li><b>~</b> regular expression</li>
                                                 </ul>
-                                            </li>
-                                            <li>All the rules defined on the same request are logically <b>AND</b></li>
-                                        </ul>
-                                        <pre>$ unset http_proxy; curl -XPUT "http://127.0.0.1:8080/laaslogid/logid?lid=RANDOMDATA&rule1=host=www.monsite.fr&rule2=uri^=monAppli"
+</li>
+<li>All the rules defined on the same request are logically <b>AND</b></li>
+</ul>
+<pre>$ unset http_proxy; curl -XPUT "http://127.0.0.1:8080/laaslogid/logid?lid=RANDOMDATA&rule1=host=www.monsite.fr&rule2=uri^=monAppli"
 [{"lid":"RANDOMDATA","rule1":["http://www.monsite.fr"],"status":"OK","comment":"CREATED"}]
                                         </pre>
-                                    </dd>
-                                    <dt>Delete a logid</dt>
-                                    <dd>
+</dd>
+<dt>Delete a logid</dt>
+<dd>
                                         Make an HTTP DELETE request to web service <b>/LaaS-API/logid</b>
                                         with the following parameter in query string:
                                         <ul>
@@ -70,9 +70,9 @@ HTTP REST api
                                                 <b>lid</b> or <b>logid</b> the logid key, as a string
                                             </li>
                                         </ul>
-                                    </dd>
-                                    <dt>Get a logid details</dt>
-                                    <dd>
+</dd>
+<dt>Get a logid details</dt>
+<dd>
                                         Make an HTTP GET request to web service <b>/LaaS-API/logid</b>
                                         with the following parameter in query string:
                                         <ul>
@@ -83,9 +83,9 @@ HTTP REST api
                                         <pre>$ unset http_proxy; curl -XGET "http://127.0.0.1:8080/laaslogid/logid?lid=RANDOMDATA"
 [{"lid":"RANDOMDATA","url":["http://www.monsite.fr"]}]
                                         </pre>
-                                    </dd>
-                                    <dt>Get the number of logids stored</dt>
-                                    <dd>
+</dd>
+<dt>Get the number of logids stored</dt>
+<dd>
                                         Make an HTTP GET request to web service <b>/LaaS-API/logid</b>
                                         with the following parameter in query string:
                                         <ul>
@@ -97,9 +97,9 @@ HTTP REST api
                                         <pre>$ unset http_proxy; curl "http://127.0.0.1:8080/laaslogid/logid?action=count"   
 {"count":1}
                                         </pre>
-                                    </dd>
-                                    <dt>Get all the logids stored</dt>
-                                    <dd>
+</dd>
+<dt>Get all the logids stored</dt>
+<dd>
                                         Make an HTTP GET request to web service <b>/LaaS-API/logid</b>
                                         with the following parameter in query string:
                                         <ul>
@@ -110,15 +110,15 @@ HTTP REST api
                                         <pre>$ unset http_proxy; curl "http://127.0.0.1:8080/laaslogid/logid?action=getall"
 [{"lid":"RANDOMDATA","url":["http://www.monsite.fr"]}]
                                         </pre>
-                                    </dd>
-                                    <dt>Test the rules</dt>
-                                    <dd>
+</dd>
+<dt>Test the rules</dt>
+<dd>
                                         Make an HTTP POST request to web service <b>/LaaS-API/logid</b>
                                         with the JSON lines you want to test.
                                         <br>One JSON message par line
-                                    </dd>
-                                    
-                                </dl>
+</dd>
+
+</dl>
 
 <h2>Add/Get APIKEYS</h2>
 <p>
@@ -127,19 +127,19 @@ HTTP REST api
 <pre>
 ABCDEFGHIJK010203=Mon API de TEST
 MLDMDLMSDL?QLKS?KQ?SK=api test 2
-                                </pre>
+</pre>
                                 
-                                <p>Just edit the file to add a new api key, it will be usable from now.</p>
-                                <p>The API will detect the file update and reload them.</p>
+<p>Just edit the file to add a new api key, it will be usable from now.</p>
+<p>The API will detect the file update and reload them.</p>
                                 
-                                <p><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
-                                    Think to synchronize the file with the other nodes.
-                                </p>
+<p><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+Think to synchronize the file with the other nodes.
+</p>
 
 <h2>LaaS ids?</h2>
-                                <p>LaaSIds are create and maintain by WAP/Automation.</p>
-                                <p>They are stored as JSON file: <b>/usr/share/tomcat/laas-logids.json</b></p>
-                                <pre>cat /usr/share/tomcat/laas-logid.json
+<p>LaaSIds are create and maintain by WAP/Automation.</p>
+<p>They are stored as JSON file: <b>/usr/share/tomcat/laas-logids.json</b></p>
+<pre>cat /usr/share/tomcat/laas-logid.json
 [{"lid":"88","vid":["v88","v89"],"uid":["u88"]},{"lid":"89","vid":["89"],"sid":["89"]},{"lid":"90","vid":["90"],"sid":["90"]},{"lid":"91","vid":["91"],"sid":["91"]},{"lid":"92","vid":["92"],"sid":["92"]},{"lid":"93","vid":["93"],"sid":["93"]},{"lid":"94","vid":["94"],"sid":["94"]},{"lid":"95","vid":["95"],"sid":["95"]},{"lid":"96","vid":["96"],"sid":["96"]},{"lid":"97","v</pre>
 
 <h2>Parameters</h2>
@@ -151,21 +151,21 @@ no-authentication-for=^(10\\.225\\.138\\.[0-9]+)$
 forward-updates-to=http://10.225.138.11/LaaS-API/logid
 </pre>
                                 
-                                <dl>
-                                    <dt>no-authentication-for</dt>
-                                    <dd>
+<dl>
+<dt>no-authentication-for</dt>
+<dd>
                                         A regular expression that define a filter to client IP
                                         address 
                                         (use X-Forwarded-For HTTP header if present,and 
                                         inserted by nginx)
-                                    </dd>
-                                    <dt>forward-updates-to</dt>
-                                    <dd>
+</dd>
+<dt>forward-updates-to</dt>
+<dd>
                                         Define the URL to send all updates to.
                                         <br><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
                                         Think to disable the APIKEY authentication for this host.(parameter no-authentication-for on the remote host)
-                                    </dd>
-                                </dl>
+</dd>
+</dl>
 
 <h2>Tests</h2>
 <ol>
