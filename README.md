@@ -1,7 +1,5 @@
 # elk-LaaS-API
 
-<!DOCTYPE html>
-<!--
 Copyright 2015 Pascal TROUVIN <pascal.trouvin at o4s.fr>.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,33 +13,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
--->
 
-<html>
- <head>
-    <title>LaaS - Principles</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-      <script src="../js/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-      <style type="text/css">
-          #tab1 img {
-              display:none;
-          }
-      </style>
-    <h1 id="title" data-toggle="tooltip" data-placement="bottom" title="Build-Name: LaaS-API
 <br>Build-Version: 0.3.2
 <br>Build-Date: 2015-11-15 20:15 CEST
 <ul>
@@ -341,17 +313,3 @@ Date: Wed, 16 Sep 2015 14:47:13 GMT
     	</div>	
     </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../js/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      	$('#rootwizard').tab();
-        $('.collapse').collapse();
-        //$('[data-toggle="tooltip"]').tooltip();
-        $('#title').tooltip({html: true})
-    });
-    </script>
-    </body>
-</html>
