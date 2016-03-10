@@ -24,16 +24,8 @@ limitations under the License.
 <h2>LaaS - Log as a Service - Principles</h2>
     
                 
-                <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                    <div class="btn-group" role="group">
-                      <button type="button" class="btn btn-default" onClick="$('#tab1_comp').hide();$('#tab1_archi').show()">Architecture</button>
-                    </div>
-                    <div class="btn-group" role="group">
-                      <button type="button" class="btn btn-default" onClick="$('#tab1_archi').hide();$('#tab1_comp').show()">Components</button>
-                    </div>
-                </div>
-                <img id="tab1_archi" src="../images/laas-architecture.png" alt="LaaS - Architecture">
-                <img id="tab1_comp" src="../images/LaaS-Components.png" alt="LaaS - Components">
+                <img id="tab1_archi" src="web/images/laas-architecture.png" alt="LaaS - Architecture">
+                <img id="tab1_comp" src="web/images/LaaS-Components.png" alt="LaaS - Components">
                 
 <h2>LaaS - API</h2>
                 
@@ -41,7 +33,6 @@ These API are used by the WAP/Automation.
                 
 HTTP REST api
                                 <dl>
-                                <!-- LOGID -->
                                     <dt>Create / Update a logid or an associated field</dt>
                                     <dd>
                                         Make an HTTP PUT request to web service <b>/LaaS-API/logid</b>
@@ -132,10 +123,10 @@ HTTP REST api
                                 </dl>
 
 <h2>Add/Get APIKEYS</h2>
-                                <p>
-                                    <b>cat /usr/share/tomcat/LaaS.apikeys.properties</b>
-                                </p>
-                                <pre>
+<p>
+<b>cat /usr/share/tomcat/LaaS.apikeys.properties</b>
+</p>
+<pre>
 ABCDEFGHIJK010203=Mon API de TEST
 MLDMDLMSDL?QLKS?KQ?SK=api test 2
                                 </pre>
@@ -154,13 +145,13 @@ MLDMDLMSDL?QLKS?KQ?SK=api test 2
 [{"lid":"88","vid":["v88","v89"],"uid":["u88"]},{"lid":"89","vid":["89"],"sid":["89"]},{"lid":"90","vid":["90"],"sid":["90"]},{"lid":"91","vid":["91"],"sid":["91"]},{"lid":"92","vid":["92"],"sid":["92"]},{"lid":"93","vid":["93"],"sid":["93"]},{"lid":"94","vid":["94"],"sid":["94"]},{"lid":"95","vid":["95"],"sid":["95"]},{"lid":"96","vid":["96"],"sid":["96"]},{"lid":"97","v</pre>
 
 <h2>Parameters</h2>
-                                <p>
-                                    <b>cat /usr/share/tomcat/LaaS.properties</b>
-                                </p>
-                                <pre>
+<p>
+<b>cat /usr/share/tomcat/LaaS.properties</b>
+</p>
+<pre>
 no-authentication-for=^(10\\.225\\.138\\.[0-9]+)$
 forward-updates-to=http://10.225.138.11/LaaS-API/logid
-                                </pre>
+</pre>
                                 
                                 <dl>
                                     <dt>no-authentication-for</dt>
@@ -179,8 +170,8 @@ forward-updates-to=http://10.225.138.11/LaaS-API/logid
                                 </dl>
 
 <h2>Tests</h2>
-                                <ol>
-                                    <li>Login: <pre>$ unset http_proxy; curl -D - -L --user "ABCDEFGHIJK010203:Mon API de TEST" "http://127.0.0.1:8080/laaslogid/login"
+<ol>
+<li>Login: <pre>$ unset http_proxy; curl -D - -L --user "ABCDEFGHIJK010203:Mon API de TEST" "http://127.0.0.1:8080/laaslogid/login"
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Set-Cookie: JSESSIONID=F870D000C9943B34237470519B9918E7; Path=/laaslogid/; HttpOnly
@@ -190,9 +181,9 @@ Date: Wed, 16 Sep 2015 14:40:05 GMT
 
 You are logged with APIkey 'ABCDEFGHIJK010203'
 </pre>
-                                    </li>
-                                    <li>
-                                        <pre>$ unset http_proxy; curl -D - --cookie "JSESSIONID=F265A5ADD3E719741E3E73514A9595CA" "http://127.0.0.1:8080/laaslogid/logid?action=count"
+</li>
+<li>
+<pre>$ unset http_proxy; curl -D - --cookie "JSESSIONID=F265A5ADD3E719741E3E73514A9595CA" "http://127.0.0.1:8080/laaslogid/logid?action=count"
 HTTP/1.1 200 OK
 Server: Apache-Coyote/1.1
 Content-Type: application/json;charset=UTF-8
@@ -201,9 +192,9 @@ Date: Wed, 16 Sep 2015 14:46:28 GMT
 
 {"count":100}
 </pre>
-                                    </li>
-                                    <li>
-                                        logout: <pre>$ unset http_proxy; curl -D - --cookie "JSESSIONID=F265A5ADD3E719741E3E73514A9595CA" "http://127.0.0.1:8080/laaslogid/login?logout"
+</li>
+<li>
+logout: <pre>$ unset http_proxy; curl -D - --cookie "JSESSIONID=F265A5ADD3E719741E3E73514A9595CA" "http://127.0.0.1:8080/laaslogid/login?logout"
 HTTP/1.1 401 Non-Autorisé
 Server: Apache-Coyote/1.1
 WWW-Authenticate: Basic "CloudOps-LaaS- API key"
@@ -213,14 +204,14 @@ Content-Length: 1369
 Date: Wed, 16 Sep 2015 14:47:13 GMT
 
 </pre>
-                                    </li>
-                                </ol>
+</li>
+</ol>
 
 <h2>HowTo</h2>
                 
 <h3>Get the API component version</h3>
-                                Open the documentation page: <a href="principles.html">click here</a>
-                                <br>Move your mouse on the page title <img src="../images/laas-version-title.png" width="250">
+Open the documentation page: <a href="principles.html">click here</a>
+<br>Move your mouse on the page title <img src="web/images/laas-version-title.png" width="250">
                                 
-                                <br><img src="../images/laas-version.png">
+<br><img src="web/images/laas-version.png">
 
